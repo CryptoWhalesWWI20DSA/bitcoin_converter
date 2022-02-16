@@ -1,21 +1,26 @@
 
-let units: { [key: string]: number } = {};
+let units: any;
+let convert: any;
+
 units = {
-    satoshi   :   0.00000001,
-    bit       :   0.000001,
-    ubtc     :   0.000001,
-    mbtc      :   0.001,
-    btc       :   1
+    "satoshi"   :   0.00000001,
+    "finney"       :   0.0000001,
+    "microbit"     :   0.000001,
+    "millibit"      :   0.001,
+    "centibit"      :   0.01,
+    "bitcoin"       :   1,
+    "decabitcoin"       :   10,
+    "kilobitcoin"       :   100,
+    "megabitcoin"       :   1000
   }
 
-let factor
-
 export class UnitConverter {
-    async getConvertedValue(value: number, from: String, to: String) {
+    getConvertedValue(value: number, from: String) {
+        for (var key in units) {
+            if (key == from)
+                convert = units[key]
 
-        factor = await units.from * units.to
-        return value * factor
+        }
+        return value * convert;
     }
-
-
 }
