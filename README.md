@@ -1,1 +1,1 @@
-# ether_converter
+# bitcoin_converter
