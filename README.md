@@ -24,8 +24,9 @@ UNIT = The unit you have the value in.
 
 ### All UNITS are:
 
-> "satoshi"           :   0.00000001,
-> "finney"            :   0.0000001,
+```ruby
+"satoshi"           :   0.00000001,
+"finney"            :   0.0000001,
 "microbit"          :   0.000001,
 "millibit"          :   0.001,
 "centibit"          :   0.01,
@@ -33,5 +34,6 @@ UNIT = The unit you have the value in.
 "decabitcoin"       :   10,
 "kilobitcoin"       :   100,
 "megabitcoin"       :   1000
+```
 
 All the units in comparison to bitcoin.
